@@ -23,7 +23,7 @@
                 <div class="col-6">
                     <div class="mb-3">
                         <label for="todo" class="form-label"></label>
-                        <input type="text" class="form-control" id="todo" v-model="todo"   @keyup.enter="addToDo">
+                        <input type="text" class="form-control" id="todo" v-model="todo.text"   @keyup.enter="addToDo">
                     </div>
 
                     <button class="btn btn-primary" @click="addToDo">Aggiungi "todo"alla lista</button>
@@ -31,7 +31,7 @@
                     <hr>
                     <ul class="list-group">
                         <li v-for="(item,index) in todolist"  :key=index class="list-group-item d-flex justify-content-between align-items-center">
-                            {{todolist[index]}} 
+                            {{todolist[index].text}} 
                             <span class="badge">
                                 <button class="btn btn-danger" @click="removeTodo(index)">x</button>
                             </span>

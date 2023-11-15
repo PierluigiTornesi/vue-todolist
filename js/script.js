@@ -3,7 +3,10 @@ const {createApp} = Vue;
 const app = createApp({
     data(){
         return{
-           todo: "",
+           todo:{
+            text: "",
+            done: false,
+           },
            todolist:[], 
         };
     },
@@ -12,7 +15,8 @@ const app = createApp({
     },
     methods: {
         addToDo: function(){
-            this.todolist.push(this.todo)
+            this.todolist.push({...this.todo})
+            this.todo.text = "";
         },
         removeTodo: function(index){
             this.todolist.splice(index,1)
