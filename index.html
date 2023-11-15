@@ -23,7 +23,7 @@
                 <div class="col-6">
                     <div class="mb-3">
                         <label for="todo" class="form-label"></label>
-                        <input type="text" class="form-control" id="todo" v-model="todo" >
+                        <input type="text" class="form-control" id="todo" v-model="todo"   @keyup.enter="addToDo">
                     </div>
 
                     <button class="btn btn-primary" @click="addToDo">Aggiungi "todo"alla lista</button>
