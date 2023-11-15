@@ -20,6 +20,9 @@ const app = createApp({
         },
         removeTodo: function(index){
             this.todolist.splice(index,1)
+        },
+        isDone: function(index){
+            this.todolist[index].done = !this.todolist[index].done 
         }
     },
 })
