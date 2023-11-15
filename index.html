@@ -16,7 +16,27 @@
 <body>
     
     <div id="app">
-        
+        <div class="container">
+            <h2 class="text-center">To Do List</h2>
+
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="todo" class="form-label"></label>
+                        <input type="text" class="form-control" id="todo" v-model="todo" >
+                    </div>
+
+                    <button class="btn btn-primary" @click="addToDo">Aggiungi "todo"alla lista</button>
+
+                    <hr>
+                    <ul class="list-group">
+                        <li v-for="(item,index) in todolist"  :key=index class="list-group-item">
+                            {{todolist[index]}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="js/script.js"></script>
