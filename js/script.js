@@ -13,6 +13,9 @@ const app = createApp({
     methods: {
         addToDo: function(){
             this.todolist.push(this.todo)
+        },
+        removeTodo: function(index){
+            this.todolist.splice(index,1)
         }
     },
 })
